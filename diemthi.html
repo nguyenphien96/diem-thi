@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tính Điểm ĐH Khối D</h1>
+    <p>Môn Toán</p>
+    <input type="text" id="a">
+    <p>Môn Văn</p>
+    <input type="text" id="b">
+    <p>Môn Anh</p>
+    <input type="text" id="c">
+    <p>Khu Vực</p>
+    <select name="" id="slex">
+        <option value="a1">KV1</option>
+        <option value="a2">KV2</option>
+        <option value="a3">KV2-NT</option>
+        <option value="a4">KV3</option>
+    </select><br>
+    <button onclick="Tinh()">Kết quả</button>
+    <h3 id="br"></h3>
+    <script>
+        function Tinh() {
+            let k = +document.getElementById("a").value;
+            let k1 = +document.getElementById("b").value;
+            let k2 = +document.getElementById("c").value;
+            let k3 = k + k1 + k2;
+            let b1 = 0.75;
+            let b2 = 0.5;
+            let b3 = 0.25;
+            let b4 = 0;
+            let sl = document.getElementById("slex").value;
+            if(sl == "a1"){
+                document.getElementById("br").innerHTML = k3 + b1 + " " + "Điểm";
+            }else if(sl == "a2"){
+                document.getElementById("br").innerHTML = k3 + b2 + " " + "Điểm";
+            }else if(sl=="a3"){
+                document.getElementById("br").innerHTML = k3 + b3 + " " + "Điểm";
+            }else if(sl=="a4"){
+                document.getElementById("br").innerHTML = k3 + b4 + " " + "Điểm";
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
